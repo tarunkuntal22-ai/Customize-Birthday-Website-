@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Birthday Surprise 🎂</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<!-- PASSWORD SCREEN -->
+<div id="passwordScreen" class="screen">
+  <h2>🔒 Enter Password</h2>
+  <input type="password" id="passwordInput" placeholder="Enter password">
+  <button onclick="checkPassword()">Unlock</button>
+  <p id="errorText"></p>
+</div>
+
+<!-- MAIN WEBSITE -->
+<div id="mainWebsite" class="hidden">
+<!-- COUNTDOWN SCREEN -->
+<div id="countdownScreen" class="screen">
+  <h1 id="countdownText">00:00:00</h1>
+</div>
+
+<!-- OPEN BUTTON -->
+<div id="openScreen" class="screen hidden">
+  <button id="openBtn">🎁 Open Your Surprise</button>
+</div>
+
+<!-- MESSAGE SCREEN -->
+<div id="messageScreen" class="screen hidden">
+  <div id="typingText" class="scrollable">
+    <!-- Message filled by script.js -->
+  </div>
+  <button id="nextBtn" class="hidden">➡️ Next</button>
+</div>
+
+<!-- PHOTO + Happy Birthday -->
+<div id="photoScreen" class="screen hidden">
+  <img src="photo.jpg" class="photo">
+  <div id="happyBirthdayText"></div>
+</div>
+
+<!-- Canvas for fireworks/confetti -->
+<canvas id="confetti"></canvas>
+
+<script src="script.js"></script>
+</div>
+</body>
+</html>

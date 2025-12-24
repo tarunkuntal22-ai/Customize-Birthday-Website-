@@ -1,0 +1,69 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+  background: pink;
+  overflow: hidden;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.hidden { display: none; }
+
+button {
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  background: #ff69b4;
+  color: white;
+  margin-top: 20px;
+}
+
+.scrollable {
+  max-height: 50%;
+  overflow-y: auto;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.photo {
+  max-width: 80%;
+  border-radius: 20px;
+}
+
+#happyBirthdayText {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #ff1493;
+  text-align: center;
+}
+#passwordScreen {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  text-align: center;
+}
+
+#passwordScreen input {
+  padding: 12px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+#errorText {
+  color: red;
+  margin-top: 10px;
+}
