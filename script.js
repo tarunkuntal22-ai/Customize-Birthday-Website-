@@ -1,5 +1,5 @@
-// Countdown target - 25 Dec 2025, 1:30 PM
-const countdownDate = new Date(2025, 11, 25, 13, 30, 0);
+// Countdown target - 25 Dec 2025, 1:33 PM
+const countdownDate = new Date(2025, 11, 25, 13, 33, 0);
 
 const countdownScreen = document.getElementById('countdownScreen');
 const countdownText = document.getElementById('countdownText');
@@ -158,3 +158,23 @@ const bgSong = new Audio("song.mp3");
 playSongBtn.addEventListener("click", () => {
     bgSong.play();
 });
+// Countdown target - 25 Dec 2025, 1:30 PM
+const countdownDate = new Date(2025, 11, 25, 13, 30, 0).getTime();
+
+const countdownFunction = setInterval(() => {
+  const now = new Date().getTime();
+  const distance = countdownDate - now;
+
+  if (distance > 0) {
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("countdownText").innerText = 
+      `${hours.toString().padStart(2,'0')}:${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')}`;
+  } else {
+    clearInterval(countdownFunction);
+    document.getElementById("countdownScreen").classList.add("hidden");
+    document.getElementById("openScreen").classList.remove("hidden");
+  }
+}, 1000);
