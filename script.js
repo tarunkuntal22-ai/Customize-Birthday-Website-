@@ -1,5 +1,5 @@
-// Countdown target - today 10:10 PM
-const countdownDate = new Date(2025, 11, 24, 22, 36, 0); 
+// Countdown target - 25 Dec 2025, 1:30 PM
+const countdownDate = new Date(2025, 11, 25, 13, 30, 0);
 
 const countdownScreen = document.getElementById('countdownScreen');
 const countdownText = document.getElementById('countdownText');
