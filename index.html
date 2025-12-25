@@ -8,6 +8,8 @@
 </head>
 
 <body>
+<img src="cloud.png" class="cloud cloud1">
+<img src="cloud.png" class="cloud cloud2">
 <!-- PASSWORD SCREEN -->
 <div id="passwordScreen" class="screen">
   <h2>🔒 Enter Password</h2>
@@ -21,6 +23,11 @@
 <!-- COUNTDOWN SCREEN -->
 <div id="countdownScreen" class="screen">
   <h1 id="countdownText">00:00:00</h1>
+</div>
+
+<!-- SONG BUTTON -->
+<div id="songScreen" class="screen hidden">
+  <button id="playSongBtn">🎵 Play Music</button>
 </div>
 
 <!-- OPEN BUTTON -->
@@ -47,5 +54,6 @@
 
 <script src="script.js"></script>
 </div>
+<audio id="bgMusic" src="song.mp3" loop></audio>
 </body>
 </html>

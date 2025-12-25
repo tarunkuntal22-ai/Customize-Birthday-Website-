@@ -20,7 +20,7 @@ confettiCanvas.height = window.innerHeight;
 // Demo message (~200 words, pseudo romantic)
 const messageContent = `
    			🎂🌷🥳HAPPYYYY  BIRTHDAYYYYYYY🎂🌷🥳
-Hey MADAM JI🎀, today is all about you! I hope your birthday is as amazing as your smile. 
+Hey🎀, today is all about you! I hope your birthday is as amazing as your smile. 
 I want to tell you how much I cherish every single moment with you. 
 You make my life brighter, happier, and so much more fun. 
 I love your laugh, your silly jokes, your care, your warmth, everything. 
@@ -28,7 +28,7 @@ I hope this year brings you endless joy, surprises, and happiness.
 You deserve all the love in the world. I promise to always be there for you, 
 to make you smile when you’re down, and to celebrate every moment of life with you. 
 Never forget that you are loved beyond words. 
-I love you babe 🌷💓
+ 🌷💓
 `;
 
 // Countdown function
@@ -133,3 +133,28 @@ function checkPassword(){
     document.getElementById("errorText").innerText = "Wrong password ❌";
   }
 }
+const music = document.getElementById("bgMusic");
+
+function playMusic(){
+  music.volume = 0.6;
+  music.play();
+}
+setInterval(() => {
+  const heart = document.createElement("div");
+  heart.innerText = "💗";
+  heart.style.position = "fixed";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.bottom = "-10px";
+  heart.style.fontSize = "20px";
+  heart.style.animation = "floatUp 6s linear";
+  document.body.appendChild(heart);
+
+  setTimeout(() => heart.remove(), 6000);
+}, 500);
+// SONG BUTTON FUNCTIONALITY
+const playSongBtn = document.getElementById("playSongBtn");
+const bgSong = new Audio("song.mp3");
+
+playSongBtn.addEventListener("click", () => {
+    bgSong.play();
+});

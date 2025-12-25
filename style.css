@@ -67,3 +67,22 @@ button {
   color: red;
   margin-top: 10px;
 }
+.cloud {
+  position: fixed;
+  top: 10%;
+  width: 120px;
+  opacity: 0.6;
+  animation: moveClouds 60s linear infinite;
+}
+
+.cloud1 { left: -150px; animation-delay: 0s; }
+.cloud2 { left: -300px; top: 30%; animation-delay: 10s; }
+
+@keyframes moveClouds {
+  from { transform: translateX(0); }
+  to { transform: translateX(140vw); }
+}
+@keyframes floatUp {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(-110vh); opacity: 0; }
+}
